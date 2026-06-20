@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoWeather</title>
+
+
+
+<link rel="stylesheet" href="output.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<style>
+    .font-anton {
+        font-family: "Anton", sans-serif;
+    }
+</style>
+
+</head>
+
+<body class="bg-gradient-to-br from-green-600 to-green-950 min-h-screen">
+
+    <header class="text-center py-10">
+        <h1 class="text-white text-5xl md:text-8xl font-anton">
+            <i class="fa-solid fa-seedling"></i> EcoWeather
+        </h1>
+    </header>
+
+
+    <main class="max-w-5xl mx-auto px-4">
+
+        <div id="container"
+            class="bg-white rounded-3xl shadow-2xl p-8">
+
+            <form id="busca"
+                class="flex flex-col md:flex-row items-center justify-center gap-3 mb-8">
+
+                <input
+                    type="search"
+                    name="cityname"
+                    id="cityname"
+                    placeholder="Digite uma cidade"
+                    class="bg-gray-100 p-3 rounded-xl w-full md:w-80 outline-none focus:ring-2 focus:ring-green-500">
+
+                <button
+                    type="submit"
+                    class="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 transition">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </form>
+
+            <div id="weather">
+
+                <h2 id="title"
+                    class="text-center text-4xl font-bold text-gray-800 mb-6">
+                    Guatambu - SC
+                </h2>
+
+                <div id="temp"
+                    class="flex flex-col md:flex-row items-center justify-center gap-4">
+
+                    <img
+                        id="temp_img"
+                        src="https://openweathermap.org/img/wn/04d@2x.png"
+                        alt="Clima">
+
+                    <div class="text-center">
+
+                        <p id="temp_value"
+                            class="text-6xl font-bold text-green-700">
+                            28°C
+                        </p>
+
+                        <p id="temp_description"
+                            class="text-gray-600 text-xl">
+                            Nublado
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="grid md:grid-cols-2 gap-4 mt-8">
+
+                    <div class="bg-green-50 p-5 rounded-2xl flex items-center gap-4 hover:scale-105 transition">
+                        <i class="fa-solid fa-temperature-high text-red-500 text-3xl"></i>
+
+                        <div>
+                            <h3 class="font-semibold">Temperatura Máxima</h3>
+                            <p id="temp_max">29°C</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 p-5 rounded-2xl flex items-center gap-4 hover:scale-105 transition">
+                        <i class="fa-solid fa-temperature-low text-blue-500 text-3xl"></i>
+
+                        <div>
+                            <h3 class="font-semibold">Temperatura Mínima</h3>
+                            <p id="temp_min">15°C</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 p-5 rounded-2xl flex items-center gap-4 hover:scale-105 transition">
+                        <i class="fa-solid fa-droplet text-cyan-500 text-3xl"></i>
+
+                        <div>
+                            <h3 class="font-semibold">Umidade</h3>
+                            <p id="humidity">20%</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 p-5 rounded-2xl flex items-center gap-4 hover:scale-105 transition">
+                        <i class="fa-solid fa-sun text-yellow-500 text-3xl"></i>
+
+                        <div>
+                            <h3 class="font-semibold">Nascer e Pôr do Sol</h3>
+                            <p id="sunborn"> 06:30</p>
+                            <p id="sundeath "> 18:30</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="alert"></div>
+
+        </div>
+
+
+        <section class="mt-20">
+
+            <h2 class="text-5xl md:text-7xl font-anton text-white text-center mb-10">
+                Guia de Cultivo
+            </h2>
+
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+                <img
+                    src="https://blog.belagro.com.br/content/uploads/2021/06/o-que-plantar-na-horta-750x422.jpg"
+                    alt="Cultivo"
+                    class="w-full rounded-2xl">
+
+                <div class="p-8">
+
+                    <h3 class="text-4xl font-bold mb-8">
+                        Tipos de Solo
+                    </h3>
+
+                    <div class="space-y-8">
+
+                        <div>
+                            <h4 class="text-2xl font-bold text-yellow-700 mb-2">
+                                Solo Arenoso
+                            </h4>
+
+                            <p class="text-gray-700">
+                                Possui partículas grandes, ótima drenagem e seca rapidamente.
+                                Ideal para raízes como cenoura e rabanete, mas exige mais
+                                irrigação e adubação.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-2xl font-bold text-orange-700 mb-2">
+                                Solo Argiloso
+                            </h4>
+
+                            <p class="text-gray-700">
+                                Retém bastante água e nutrientes. É fértil, mas pode ficar
+                                compactado. A adição de matéria orgânica melhora sua estrutura.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-2xl font-bold text-green-700 mb-2">
+                                Solo Humoso
+                            </h4>
+
+                            <p class="text-gray-700 pb-10">
+                                Rico em húmus e matéria orgânica. Considerado o melhor solo
+                                para a maioria das hortaliças devido à sua alta fertilidade.
+                            </p>
+
+                <img
+                    src="https://recriarcomvoce.org.br/wp-content/uploads/2017/10/fases-da-lua-nas-plantacoes.jpg"
+                    alt="Cultivo"
+                    class="w-full rounded-2xl">
+
+                <div class="p-8">
+
+                    <h3 class="text-4xl font-bold mb-8">
+                        Lua
+                    </h3>
+
+                    <div class="space-y-8">
+
+                        <div>
+                            <h4 class="text-2xl font-bold text-yellow-700 mb-2">
+                                 Lua Nova
+                            </h4>
+
+                            <p class="text-gray-700">
+                                O que fazer: Excelente para preparar o solo, fazer adubações orgânicas, eliminar ervas daninhas e iniciar o plantio de espécies subterrâneas (como cenoura, beterraba, rabanete, batata e gengibre).
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-2xl font-bold text-orange-700 mb-2">
+                                Lua Crescente
+                            </h4>
+
+                            <p class="text-gray-700">
+                                Influência: A seiva começa a subir, concentrando-se no caule e nas folhas. A luminosidade noturna aumenta.O que fazer: Fase ideal para plantar espécies que crescem para cima do solo, como hortaliças folhosas (alface, rúcula, couve, espinafre) e temperos (salsa, cebolinha, manjericão). Ótimo para fazer transplantes de mudas e enxertos
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-2xl font-bold text-green-700 mb-2">
+                                Lua Cheia
+                            </h4>
+
+                            <p class="text-gray-700">
+                                influência: Redução da luminosidade e da gravidade da lua. A seiva desce, concentrando-se novamente na raiz e na base da planta.O que fazer: É a melhor fase para realizar podas de limpeza e manutenção, pois as plantas perdem menos seiva e cicatrizam melhor. Também é indicada para colher raízes, tubérculos e fazer tratamentos contra pragas.
+                            </p>
+
+                <img
+                    src="https://www.em.com.br/emfoco/wp-content/uploads/2025/04/horta-vertical_1745942199483.jpg"
+                    alt="Cultivo"
+                    class="w-full rounded-2xl">
+
+                <div class="p-8">
+
+                    <h3 class="text-4xl font-bold mb-8">
+                        Umidade e rega
+                    </h3>
+
+                    <div class="space-y-8">
+
+
+                        <div>
+                            <h4 class="text-2xl font-bold text-green-700 mb-2">
+                                Regra Geral
+                            </h4>
+                            
+                            <p class="text-gray-700">
+                                A regra de ouro é sempre verificar a terra antes de regar: coloque o dedo cerca de <b>2</b> a <b>3</b> cm na terra. Se estiver seca, é hora de molhar, se ainda estiver úmida, espere mais um pouco. Mantendo o solo com uma umidade entre <b>20%</b> e <b>60%</b>. Para otimizar o seu tempo e evitar desperdícios, regue no início da manhã ou no final da tarde.
+                            </p>
+
+                            <p class="text-gray-800 font-bold pt-10"><a href="https://wwfbrnew.awsassets.panda.org/downloads/20241202_cartilha_horta_msp_wwfbr_v4final_digital.pdf">Guia de cultivo ilustrado</a></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="text-center text-green-100 py-8 mt-16">
+        <p>Todos os direitos reservados a EcoWeather - Até Criança aprende</p>
+    </footer>
+
+    <script src="src/teste.js"></script>
+
+</body>
+</html>
